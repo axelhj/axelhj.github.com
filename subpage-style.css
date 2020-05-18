@@ -1,0 +1,121 @@
+body {
+  position: absolute;
+  background: white;
+  color: #151233;
+  font-family: Arial, Helvetica, Verdana, Sans-serif;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+div {
+  position: relative;
+}
+
+.title-bar {
+  background-color: #EDF5FC;
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60px;
+}
+
+h1 {
+  display: inline-block;
+  content: "Axel Hjelmqvist";
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0 0 20px;
+}
+
+p {
+  margin-top: 5px;
+}
+
+.power-of-two-game-content {
+  margin-bottom: 500px;
+}
+
+.menu-button {
+  background-color: #7BA5C9;
+  float: right;
+  width: 110px;
+  height: 45px;
+  margin: 7px 20px 5px 5px;
+  border-radius: 3px;
+}
+
+.menu-button a {
+  text-decoration: none;
+}
+
+.content {
+  clear: left;
+  width: 100%;
+}
+
+.content > * {
+  margin: 45px 45px 0 65px;
+}
+
+.canvas,
+.canvas-background {
+  clear: left;
+  display: block;
+  margin: 20px 0 100px 65px;
+}
+
+.power-of-two-game-canvas {
+  position: absolute;
+  top: 97px;
+  width: 300px;
+  height: 600px;
+}
+
+.canvas-background {
+  position: absolute;
+  top: 95px;
+  width: 300px;
+}
+
+.footer {
+  padding-top: 35px;
+  font-size: 0.7em;
+  color: white;
+}
+
+.center-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 150px;
+  height: 45px;
+  line-height: 21px;
+  padding-left: 5px;
+  padding-right: 7px;
+}
+
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #e8e8e8;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 740px) {
+  .canvas,
+  .canvas-background {
+    display: block;
+    margin: 20px auto 100px auto;
+  }
+
+  .power-of-two-game-canvas-background,
+  .power-of-two-game-canvas {
+    margin-left: 20px;
+    margin-right: 20px;
+}

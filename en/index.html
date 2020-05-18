@@ -6,36 +6,58 @@
     <meta name="keywords" content="axel hjelmqvist, homepage, personal, hemsida, cv" />
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="../styles.css"></link>
+    <link rel="stylesheet" type="text/css" href="../index-page-style.css"></link>
   </head>
   <body id="top">
-    <div class="header"></div>
-    <div class="menu-background"></div>
-    <ul id="menu" class="menu">
-      <li class="button"><a href="index.html#github" onclick="getElementById('code_header').className += ' flash-red';"  class="center">Github</a></li>
-      <li class="button"><a href="../blocksgame.html" class="center">Blocksame</a></li>
-      <li class="button"><a href="../potgame.html" class="center">2048+ game</a></li>
-      <li class="button"><a href="index.html#contact"  onclick="getElementById('contact_header').className += ' flash-red';" class="center">Contact</a></li>
-    </ul>
-    <div class="content">
-      <div id="top" class="section pres">
+    <div class="page-head-menu">
+      <div class="menu-title">
+        <h1>Axel Lells Hjelmqvist</h1>
         <p>Welcome to my homepage. You can contact me aswell as play some games.
       </div>
-      <div id="github" class="section github">
-      <h2 id="code_header">Code</h2>
-        <p>I have a page on <a class="intext" href="https://github.com/axelhj/Blocksgame">Github</a>, you may follow me there.</p>
-      </div>
-      <div id="contact" class="section contact">
-        <h2 id="contact_header">Contact</h2>
-        <p>Linked in: <a href="https://www.linkedin.com/in/axel-lells-hjelmqvist-2768a298/" style="text-decoration:none;"><span style="height: 115%; font: 95% Arial,sans-serif; color:#0783B6;"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="Visa Axel Hjelmqvists profil på LinkedIn" style="vertical-align:middle;" border="0">&nbsp;Gå till Axel Hjelmqvists profil</span></a></p>
-      </div>
-      <div class="section">
-        <h2>Other languages</h2>
-        <a class="langlink" href="../index.html"> <img width="19" height="15" src="../flag_se.png" alt="swedish flag"> </a>
-        <a class="langlink" href="../de/index.html"> <img width="19" height="15" src="../flag_de.png" alt="german flag"> </a>
-        <a class="langlink" href="index.html"> <img width="19" height="15" src="../flag_en.png" alt="english flag"> </a>
-      </div>
+      <ul class="menu-list">
+        <li class="menu-item flash-code-header"><a href="index.html#github" class="center-text">Github</a></li>
+        <li class="menu-item"><a href="../blocksgame.html" class="center-text">Blocksame</a></li>
+        <li class="menu-item"><a href="../power-of-two-game.html" class="center-text">2048+ game</a></li>
+        <li class="menu-item flash-contact-header"><a href="index.html#contact" class="center-text">Contact</a></li>
+      </ul>
     </div>
-    <p class="footer">Copyright © 2015 Axel Hjelmqvist</p>
+    <div id="github" class="page-section">
+      <h2 id="code-header">Code</h2>
+      <p>Follow me on <a href="https://github.com/axelhj/">Github</a>.</p>
+    </div>
+    <div id="contact" class="page-section">
+      <h2 id="contact-header">Contact</h2>
+      <p>Linked in:
+        <a
+          href="https://www.linkedin.com/in/axel-lells-hjelmqvist-2768a298/"
+        >
+          <img
+            src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png"
+            alt="Visa Axel Hjelmqvists profil på LinkedIn"
+          />
+        </a>
+      </p>
+    </div>
+    <div class="page-section">
+      <h2>Other languages</h2>
+      <p>
+        <a href="../index.html">Svenska</a>
+      </p>
+    </div>
+    <p class="page-footer">Copyright © 2015 Axel Hjelmqvist</p>
+    <script>
+      function resetClassOnClick(triggerElementClass, targetElementClass, resetClass) {
+        document.getElementsByClassName(triggerElementClass)[0]
+        .addEventListener("click", function() {
+          targetElement = document.getElementById(targetElementClass);
+          targetElement.className = "";
+          setTimeout(function () {
+            targetElement.className = resetClass;
+          }, 0);
+        });
+      }
+      resetClassOnClick("flash-code-header", "code-header", "flash-red");
+      resetClassOnClick("flash-contact-header", "contact-header", "flash-red");
+    </script>
   </body>
 </html>

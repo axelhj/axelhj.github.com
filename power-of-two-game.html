@@ -2,10 +2,11 @@
 <html lang="sv">
   <head>
     <title>Axel Hjelmqvist - 2048+ -spel</title>
-    <meta name="description" content="Välkommen till Axel Hjelmqvists hemsida. Welcome to the homepage of Axel Hjelmqvist" />
+    <meta name="description" content="Välkommen till Axel Hjelmqvists hemsida. Welcome to my homepage." />
     <meta name="keywords" content="axel hjelmqvist, spel, portfolio, cv" />
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="styles-old.css"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="subpage-style.css"></link>
   </head>
   <body>
   <script id="vtexshader" type="x-shader/x-vertex">
@@ -36,14 +37,20 @@
       gl_FragColor = texture2D(texture0, (vec4(texCoordVar.xy, 1.0, 1.0) * textureTransform).xy);
     }
   </script>
-    <ul id="select" class="menu">
-      <li class="button"><a href="index.html" class="center">Presentation</a></li>
-    </ul>
+    <div class="title-bar">
+      <h1>Axel Hjelmqvist</h1>
+      <div class="menu-button">
+        <a href="index.html" class="center-text">< Go back</a>
+      </div>
+    </div>
     <div id="main" class="content">
-      <p style="margin-bottom: 500px;">Ett enkelt spel som jag skrivit i JavaScript, kräver HTML5 och du spelar med piltangenterna.
-      Baserat på Webgl, jag har inte använt några extra bibliotek.</p>
-      <img src="background.png" alt="art" style="position: absolute; top: 150px; width: 300px;">
-      <canvas class="content" id="content" width="300" height="600" style="position: absolute; top: 150px; width: 300px; height: 600px;">
+      <p class="power-of-two-game-preface">
+        Ett HTML5-spel som är byggt med Web-GL. Du kan spela med piltangenter eller på en mobil enhet.
+        <br />
+        Gör en swipe eller tryck på en piltangent i någon riktning för att göra ditt drag.
+      </p>
+      <img src="background.png" alt="art" class="canvas-background canvas power-of-two-game-canvas-background" />
+      <canvas class="canvas power-of-two-game-canvas" id="content" width="300" height="600">
         <p>Tyvärr stöder inte din webbläsare Canvas-elmentet. Html5 canvas is not supported by your browser.</p>
       </canvas>
       <p class="footer">Copyright © 2015 Axel Hjelmqvist</p>

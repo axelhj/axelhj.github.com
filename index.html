@@ -1,43 +1,63 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">
   <head>
-    <title>Axel Hjelmqvist - CV, spiele</title>
+    <title>Axel Hjelmqvist</title>
     <meta name="description" content="Välkommen till Axel Hjelmqvists hemsida. Welcome to the homepage of Axel Hjelmqvist" />
     <meta name="keywords" content="axel hjelmqvist, homepage, personal, hemsida, cv" />
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="styles.css"></link>
+    <link rel="stylesheet" type="text/css" href="index-page-style.css"></link>
   </head>
   <body id="top">
-    <div class="headerSection">
-      <div class="header"></div>
-      <div class="menu-background"></div>
-      <ul id="menu" class="menu">
-        <li class="button"><a href="index.html#github" onclick="getElementById('code_header').className += ' flash-red';" class="center">Github</a></li>
-        <li class="button"><a href="blocksgame.html" class="center">Blocks-spel</a></li>
-        <li class="button"><a href="potgame.html" class="center">2048+-spel</a></li>
-        <li class="button"><a href="index.html#contact" onclick="getElementById('contact_header').className += ' flash-red';" class="center">Kontakt</a></li>
+    <div class="page-head-menu">
+      <div class="menu-title">
+        <h1>Axel Lells Hjelmqvist</h1>
+        <p>Välkommen till min sida. Här finns några spel som jag skapade för några år sedan.</p>
+      </div>
+      <ul" class="menu-list">
+        <li class="menu-item flash-code-header"><a href="index.html#github" class="center-text">Github</a></li>
+        <li class="menu-item"><a href="blocksgame.html" class="center-text">Blocks-spel</a></li>
+        <li class="menu-item"><a href="power-of-two-game.html" class="center-text">2048+-spel</a></li>
+        <li class="menu-item flash-contact-header"><a class="center-text" href="index.html#contact" >Kontakt</a></li>
       </ul>
     </div>
-    <div class="content">
-      <div id="top" class="section pres">
-        <p>Välkommen till min sida. Här kan du komma i kontakt med mig och spela lite spel.</p>
-      </div>
-      <div id="github" class="section github">
-      <h2 id="code_header">Kod</h2>
-        <p>Jag har en sida på <a class="intext" href="https://github.com/axelhj/Blocksgame">Github</a>, följ mig gärna där.</p>
-      </div>
-      <div id="contact" class="section contact">
-        <h2 id="contact_header">Kontakt</h2>
-        <p>Linked in: <a href="https://www.linkedin.com/in/axel-lells-hjelmqvist-2768a298/" style="text-decoration:none;"><span style="height: 115%; font: 95% Arial,sans-serif; color:#0783B6;"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="Visa Axel Hjelmqvists profil på LinkedIn" style="vertical-align:middle;" border="0">&nbsp;Gå till Axel Hjelmqvists profil</span></a></p>
-      </div>
-      <div class="section">
-        <h2>Andra språk</h2>
-        <a class="langlink" href="index.html"> <img width="19" height="15" src="flag_se.png" alt="swedish flag"> </a>
-        <a class="langlink" href="de/index.html"> <img width="19" height="15" src="flag_de.png" alt="german flag"> </a>
-        <a class="langlink" href="en/index.html"> <img width="19" height="15" src="flag_en.png" alt="english flag"> </a>
-      </div>
+    <div id="github" class="page-section">
+      <h2 id="code-header">Kod</h2>
+      <p>På <a href="https://github.com/axelhj/">Github</a> finns lite av sådant som jag gjort på fritiden.</p>
     </div>
-    <p class="footer">© 2017 Axel Hjelmqvist</p>
+    <div id="contact" class="page-section">
+      <h2 id="contact-header">Kontakt</h2>
+      <p>Linked in:
+        <a
+          href="https://www.linkedin.com/in/axel-lells-hjelmqvist-2768a298/"
+        >
+          <img
+            src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png"
+            alt="Visa Axel Hjelmqvists profil på LinkedIn"
+          />
+        </a>
+      </p>
+    </div>
+    <div class="page-section">
+      <h2>Engelska</h2>
+      <p>
+        <a href="en/index.html">In english</a>
+      </p>
+    </div>
+    <p class="page-footer">© 2017 Axel Hjelmqvist</p>
+    <script>
+      function resetClassOnClick(triggerElementClass, targetElementClass, resetClass) {
+        document.getElementsByClassName(triggerElementClass)[0]
+        .addEventListener("click", function() {
+          targetElement = document.getElementById(targetElementClass);
+          targetElement.className = "";
+          setTimeout(function () {
+            targetElement.className = resetClass;
+          }, 0);
+        });
+      }
+      resetClassOnClick("flash-code-header", "code-header", "flash-red");
+      resetClassOnClick("flash-contact-header", "contact-header", "flash-red");
+    </script>
   </body>
 </html>
